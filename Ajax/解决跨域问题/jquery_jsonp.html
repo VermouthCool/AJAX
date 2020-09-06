@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.js"></script>
+</head>
+<body>
+    <button>dianwo</button>
+    <script>
+        $('button').click(function(){
+            $.ajax('http://localhost:8080',{
+                method:'post',
+                // dataType:'jsonp',
+                data:{name:'jian'},
+                success:function(data){
+                    console.log('nihanshua',data);
+                }
+            })
+            //简写：
+            // $.getJSON('http://localhost:8080?callback=?',{},()=>{})
+        })
+    </script>
+</body>
+</html>

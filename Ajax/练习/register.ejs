@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="http://localhost:8080" method="POST">
+        邮箱: <br>
+        <input type="email" name="email"><span><%=result.email%></span><br>
+        用户名: <br>
+        <input type="text" name="username"><span><%=result.username%></span><br>
+        密码 : <br>
+        <input type="password" name="password"><span><%=result.password%></span><br>
+        重复密码: <br>
+        <input type="repeat" name="repeat"><span><%=result.repeat%></span>
+        <br>
+        <button type="submit">提交</button>
+    </form>
+</body>
+</html>

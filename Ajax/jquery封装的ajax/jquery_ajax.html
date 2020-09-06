@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.11.0/jquery.js"></script>
+</head>
+<body>
+    <button id="btn1">点我发送jQuery的get请求</button>
+    <button id="btn2">点我发送jQuery的post请求</button>
+    <script>
+        $('#btn1').click(function(){
+            //完整版
+            // $.ajax('http://localhost:8080',{
+            //     method:'get',
+            //     data:{name:'jian',age:18},
+            //     success:function(data){
+            //         console.log(data);
+            //     },
+            //     error:function(err){
+            //         console.log(err);
+            //     }
+            // })
+            //简写
+            $.post('http://localhost:8080',{name:'jian',age:18},(data,status,xhr)=>{
+                console.log(data)
+            })
+        })
+        //post的请求于get类似  只需要改掉get为post
+    </script>
+</body>
+</html>
